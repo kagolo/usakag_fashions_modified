@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u5)n-bsm2ub4bpu^h*vjicc0@l98+n&^(=^p5i*#d+6(g2&ax=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['FASHIONS1.USAKENTS.COM']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,10 +122,9 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/images/'
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static')
-# ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') ##specify static root
+STATIC_ROOT = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
 
