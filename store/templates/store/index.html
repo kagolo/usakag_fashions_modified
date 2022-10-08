@@ -2,146 +2,70 @@
 {% load static %}
 {% block content %}
 
-<div class="header-top-w3layouts">  
-	<div class="container">
-		<div class="col-md-6 logo-w3">
-			<a href="{% url 'store' %}"><img src="{% static 'images/logo2.png' %}" alt=" " /><h1>USAKAG<span>FASHIONS</span></h1></a>
-		</div>
-		<div class="col-md-6 phone-w3l">
-			<ul>
-				<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
-				<li>+256704544125</li>
-			</ul>
-		</div>
-		<div class="clearfix"></div>
+
+<!-- banner -->
+<div class="slideshow-container">
+</div class="container">
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 4</div>
+	  <a href="{% url 'cart' %}"><img src="{% static 'images/banner65.jpg' %}" width="auto" height="400px">
+	  <div class="text"><h3  style=font-size:30px;>SK Fashions Men;<br><br><br></h3></div></a>
 	</div>
-</div>
-<div class="header-bottom-w3ls">
-	<div class="container">
-		<div class="col-md-7 navigation-agileits">
-			<nav class="navbar navbar-default">
-				<div class="navbar-header nav_2">
-					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div> 
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav ">
-						<li class=" active"><a href="{% url 'store' %}" class="hyper "><span>Home</span></a></li>	
-						<li class="dropdown ">
-							<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Clothing<b class="caret"></b></span></a>
-								<ul class="dropdown-menu multi">
-									<div class="row">
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-			
-												<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Women's Clothing</a></li>
-												<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's Clothing</a></li>
-												<li><a href="#"> <i class="fa fa-angle-right" aria-hidden="true"></i>Kid's Wear</a></li>
-												<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Party Wear</a></li>
-										
-											</ul>
-										
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'cart' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Casuals</a></li>
-												<li><a href="{% url 'cart' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Night Wear</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Formals</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Inner Wear</a></li>
-										
-											</ul>						
-										</div>
-										<div class="col-sm-4 w3l">
-											<a href="{% url 'cart' %}"><img src="{% static 'images/menu1.jpg' %}" class="img-responsive" alt=""></a>
-										</div>
-										<div class="clearfix"></div>
-									</div>	                                
-								</ul>
-						</li>
-						<li class="dropdown">
-								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Personal Care <b class="caret"></b></span></a>
-								<ul class="dropdown-menu multi multi1">
-									<div class="row">
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'cart' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Jewellery </a></li>
-												<li><a href="{% url 'cart' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Watches</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Perfumes</a></li>
-										
-											</ul>
-											
-										</div>
-										<div class="col-sm-4">
-											
-											<ul class="multi-column-dropdown">
-												<li><a href="{% url 'cart' %}"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
-												<li><a href="{% url 'cart' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Shoes</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Handbags</a></li>
-												<li><a href="{% url 'checkout' %}"><i class="fa fa-angle-right" aria-hidden="true"></i>Skin care</a></li>
-										
-											</ul>
-											
-										</div>
-										<div class="col-sm-4 w3l">
-											<a href="{% url 'cart' %}"><img src="{% static 'images/menu2.jpg' %}" class="img-responsive" alt=""></a>
-										</div>
-										<div class="clearfix"></div>       
-									</div>	
-								</ul>
-						</li>
-						<li><a href="{% url 'cart' %}" class="hyper"><span>About</span></a></li>
-						<li><a href="{% url 'checkout' %}" class="hyper"><span>Contact Us</span></a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-								<script>
-				$(document).ready(function(){
-					$(".dropdown").hover(            
-						function() {
-							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-							$(this).toggleClass('open');        
-						},
-						function() {
-							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-							$(this).toggleClass('open');       
-						}
-					);
-				});
-				</script>
-		<div class="col-md-4 search-agileinfo">
-			<form action="#" method="post">
-				<input type="search" name="Search" placeholder="Search for a Product..." required="">
-				<button type="submit" class="btn btn-default search" aria-label="Left Align">
-					<i class="fa fa-search" aria-hidden="true"> </i>
-				</button>
-			</form>
-		</div>
-		<div class="col-md-1 cart-wthree">
-			<div class="cart"> 
-				<form action="#" method="post" class="last"> 
-					<input type="hidden" name="cmd" value="_cart" />
-					<input type="hidden" name="display" value="1" />
-					<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-				</form>  
-			</div>
-		</div>
-		<div class="clearfix"></div>
+	
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 4</div>
+	  <a href="{% url 'cart' %}"><img src="{% static 'images/scarves.jpg' %}" width="auto" height="400px">
+	  <div class="text"><h3  style=font-size:30px;>Usakag fashions Scarves;<br><br><br></h3></div></a>
 	</div>
-</div>
-<div class="banner-agile">
-	<div class="container">
-		<h2>WELCOME TO</h2>
-		<h3>FASHION <span>CLUB</span></h3>
-		<p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
-		<a href="{% url 'cart' %}">Read More</a>
+	
+	<div class="mySlides fade">
+	  <div class="numbertext">3 / 4</div>
+	  <a href="{% url 'cart' %}"><img src="{% static 'images/shirts.jpg' %}" width="auto" height="400px">
+	  <div class="text"  style=font-size:30px;>SK Fashions Men;<br><br><br></div></a>
 	</div>
-</div>
+	
+    <div class="mySlides fade">
+		<div class="numbertext">4 / 4</div>
+		<a href="{% url 'cart' %}"><img src="{% static 'images/dresses.jpg' %}" width="auto" height="400px">
+		<div class="text"  style=font-size:30px;>SK Fashions Women;<br><br><br></div></a>
+	</div>
+
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<br>
+	
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span>
+	  <span class="dot"></span> 
+	</div>
+	</div>
+	
+	<script>
+	var slideIndex = 0;
+	showSlides();
+	
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 1500); // Change image every 2 seconds
+	}
+	</script>
+	
+<!-- //banner -->
 
 <div class="top-products">
 	<div class="container">
@@ -159,6 +83,7 @@
 					<div class="tab-1 resp-tab-content">
 						{% for product in products %}
 						<div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
+							
 							<a href="{% url 'cart' %}"><div class="product-img">
 								<img src="{{product.imageURL}}" alt="" />
 								<div class="p-mask">
@@ -171,6 +96,7 @@
 								</form>
 								</div>
 							</div></a>
+							
 							<i class="fa fa-star yellow-star" aria-hidden="true"></i>
 							<i class="fa fa-star yellow-star" aria-hidden="true"></i>
 							<i class="fa fa-star yellow-star" aria-hidden="true"></i>
@@ -850,11 +776,12 @@
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 footer-grids fgd1">
-		<a href="{% url 'store' %}"><img src="{% static 'images/logo2.png' %}" alt=" " /><h3>USAKAG<span>FASHIONS</span></h3></a>
+		<a href="{% url 'store' %}"><img src="{% static 'images/usakag_fashions_logo1.png' %}" alt=" " /><h3 style=color:lightgreen;>USAKAG<span>FASHIONS</span></h3></a>
 		<ul>
-			<li>1234k Avenue, 4th block,</li>
-			<li>New York City.</li>
-			<li><a href="mailto:info@example.com">info@example.com</a></li>
+			<li>Trade Link shop No.504 & Usafi market stall No.D029-D031.</li>
+			<li>Kampala City</li>
+			<li><a href="usamakagolo@gmail.com">Email: usamakagolo@gmail.com</a></li>
+			<li>Telephone: 0704544125/0782411217</li>
 			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
