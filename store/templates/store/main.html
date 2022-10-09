@@ -120,16 +120,18 @@
                                    <li><a href="{% url 'cart' %}" class="hyper"><span>About</span></a></li>
                                    
                               </ul>
-                         </div>
-                         <div class="col-md-1 cart-wthree">
-                              <div class="cart"> 
-                                   <a href="{% url 'cart' %}">
-                                        <img  id="cart-icon" src="{% static 'images/cart.png' %}">
-                                    </a>
-                                    <p id="cart-total">4</p>
-                         
+                              <div class="col-md-1 cart-wthree">
+                                   <div class="cart">
+                                        <p id="cart-total">4</p> 
+                                        <a href="{% url 'cart' %}">
+                                             <img  id="cart-icon" src="{% static 'images/cart.png' %}">
+                                         </a>
+                                         
+                              
+                                   </div>
                               </div>
                          </div>
+                         
                     </nav>
                </div>
                                              <script>
